@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# The release script is optional but recommended. 
+# It provides metadata to the peer about the chaincode (e.g., CouchDB indexes).
+
+SOURCE_DIR=$1
+METADATA_DIR=$2
+OUTPUT_DIR=$3
+
+# Copy connection.json if needed by release (usually not, but good for consistency)
+if [ -f "$SOURCE_DIR/connection.json" ]; then
+    cp "$SOURCE_DIR/connection.json" "$OUTPUT_DIR/connection.json"
+fi
+
+# Copy CouchDB indexes/metadata
+if [ -d "$SOURCE_DIR/META-INF" ]; then
+    cp -r "$SOURCE_DIR/META-INF" "$OUTPUT_DIR/"
+fi
+
+exit 0

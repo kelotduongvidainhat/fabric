@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# The detect script checks if the chaincode package is valid for this builder.
+# For CaaS, we typically look for a connection.json file in the source package,
+# OR we rely on the type being 'ccaas' (which is passed via other means or assumed).
+# Here we check for connection.json or standard Go files if we were building, 
+# but for simple CaaS, existence of connection.json is key.
+
+SOURCE_DIR=$1
+
+# Check if connection.json exists in the root of the chaincode package
+if [ -f "$SOURCE_DIR/connection.json" ]; then
+    exit 0
+fi
+
+exit 1

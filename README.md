@@ -22,6 +22,25 @@ This project is built using the latest stable technologies:
 - **Multi-Source Dashboard**: Frontend capability to switch between viewing live blockchain data and indexed database records.
 - **Secure Transfers**: Implementation of secure asset transfer logic.
 
+
+## 📂 Project Structure
+
+```text
+.
+├── backend/            # Go backend API and Event Listener
+├── bin/               # Hyperledger Fabric Binaries
+├── builders/          # External Chaincode Builders (CaaS)
+│   └── ccaas/
+├── config/            # Fabric Network Configuration (configtx, core, orderer)
+├── database/          # Database migrations and seeds
+├── docs/              # Project Documentation
+│   ├── DATA.md        # Data Models & Schemas
+│   └── layers/        # Network Layer Details
+├── frontend/          # React Frontend Application
+├── network/           # Network scripts, compose files, and crypto material
+└── README.md          # Project Entry Point
+```
+
 ## 📋 Prerequisites
 
 Ensure you have the following installed on your system:

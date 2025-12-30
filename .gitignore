@@ -1,0 +1,42 @@
+# Hyperledger Fabric Binaries
+/bin/
+
+# Generated Crypto Material & Artifacts
+organizations/peerOrganizations/
+organizations/ordererOrganizations/
+organizations/fabric-ca/
+channel-artifacts/
+system-genesis-block/
+*.block
+*.tx
+
+# Wallets and Keystores
+wallet/
+keystore/
+msp/
+tlsca/
+users/
+
+# Docker & Logs
+*.log
+docker-compose.log
+/test-network/docker/
+
+# Temporary Files
+tmp/
+*.tar.gz
+*.zip
+
+# IDE & System
+.DS_Store
+.vscode/
+.idea/
+
+# Languages
+node_modules/
+dist/
+build/
+coverage/
+*.out
+*.test
+vendor/

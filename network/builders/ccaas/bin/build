@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# The build script prepares the artifacts required by the peer.
+# For CaaS, this simply means passing the connection.json to the output directory.
+# The peer uses this information to connect to the external chaincode service.
+
+SOURCE_DIR=$1
+METADATA_DIR=$2
+OUTPUT_DIR=$3
+
+# Copy connection.json to the output directory
+if [ -f "$SOURCE_DIR/connection.json" ]; then
+    cp "$SOURCE_DIR/connection.json" "$OUTPUT_DIR/connection.json"
+fi
+
+# Copy metadata if present (indexes, etc)
+if [ -f "$SOURCE_DIR/metadata.json" ]; then
+    cp "$SOURCE_DIR/metadata.json" "$OUTPUT_DIR/metadata.json"
+fi
+
+exit 0
