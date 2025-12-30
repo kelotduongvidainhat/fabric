@@ -1,12 +1,12 @@
 # Hyperledger Fabric Binaries
-/bin/
+network/bin/
 
 # Generated Crypto Material & Artifacts
-organizations/peerOrganizations/
-organizations/ordererOrganizations/
-organizations/fabric-ca/
-channel-artifacts/
-system-genesis-block/
+network/organizations/peerOrganizations/
+network/organizations/ordererOrganizations/
+network/organizations/fabric-ca/
+network/channel-artifacts/
+network/system-genesis-block/
 *.block
 *.tx
 
@@ -20,7 +20,7 @@ users/
 # Docker & Logs
 *.log
 docker-compose.log
-/test-network/docker/
+network/docker/*.env
 
 # Temporary Files
 tmp/
